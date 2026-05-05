@@ -1,15 +1,30 @@
-const user = { name: "Priya", age: 24, "favourite color": "blue" };
 
-// Dot — clean
-console.log(user.name);              
-console.log(user.age);               
+const bankAccount = {
+  holder: "Aarav",
+  balance: 5000,
 
-// Bracket — when key is dynamic
-const field = "name";
-console.log(user[field]);            
+  deposit(amount) {
 
-// Bracket — when key has spaces/special chars
-console.log(user["favourite color"]); 
+    this.balance = this.balance + amount;
+    return this.balance;
+  },
 
-// Property doesn't exist? undefined — no error
-console.log(user.email);            
+
+  withdraw(amount) {
+
+    if (this.balance >= amount) {
+
+      this.balance = this.balance - amount;
+
+      return this.balance;
+
+    } else {
+      return "Insufficient funds";
+    }
+  }
+};
+
+
+console.log(bankAccount.deposit(1000));   
+console.log(bankAccount.withdraw(2000));  
+console.log(bankAccount.withdraw(10000)); 
