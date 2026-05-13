@@ -10,6 +10,9 @@ import "./ExerciseTask/day-10.js";
 import "./Practice/day8.js";
 import "./Practice/day9.js";
 import "./Practice/day10.js";
+import "./Practice/day11.js";
+import "./Practice/day13.js";
+
 
 /*const title = document.getElementById("title");
 const btn = document.getElementById("btn");

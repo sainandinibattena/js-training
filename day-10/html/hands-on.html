@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10 - DOM Manipulation Basics</title>
+
+    <link rel="preload" href="../../shared/css/styles.css" as="style">
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+
+    <style>
+
+        .dark {
+            background: #111;
+            color: #eee;
+        }
+
+        .name-item {
+            padding: 4px 8px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 6px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="page-shell">
+
+        <main class="page-main" id="main-content">
+
+            <header class="page-title">
+                <p class="lesson-label">Day 10 - DOM Manipulation Basics</p>
+                <h1 id="title">JS Training</h1>
+            </header>
+
+
+
+            <button id="theme-btn">Toggle Theme</button>
+
+            <ul id="names-list"></ul>
+
+            <button id="add-name">Add Name</button>
+
+            <div id="cards"></div>
+
+
+
+            <details class="exercise">
+
+                <summary>
+                    <span class="lesson-task__tag">Task 1</span>
+                    <span class="lesson-task__title"> Select and Change Text</span>
+                </summary>
+
+                <div class="lesson-task__body">
+
+                    <ul class="task-spec">
+
+                        <li>Use <code>querySelector()</code> to select the title.</li>
+
+                        <li>Change the text and styles.</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+
+
+            <details class="exercise">
+
+                <summary>
+                    <span class="lesson-task__tag">Task 2</span>
+                    <span class="lesson-task__title"> Toggle Dark Theme Class</span>
+                </summary>
+
+                <div class="lesson-task__body">
+
+                    <ul class="task-spec">
+
+                        <li>Toggle the dark class using <code>classList.toggle()</code>.</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+
+
+            <details class="exercise">
+
+                <summary>
+                    <span class="lesson-task__tag">Task 3</span>
+                    <span class="lesson-task__title"> Build a List Dynamically</span>
+                </summary>
+
+                <div class="lesson-task__body">
+
+                    <ul class="task-spec">
+
+                        <li>Create list items dynamically and append them.</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+
+
+            <details class="exercise">
+
+                <summary>
+                    <span class="lesson-task__tag">Bonus</span>
+                    <span class="lesson-task__title"> Build a Card</span>
+                </summary>
+
+                <div class="lesson-task__body">
+
+                    <ul class="task-spec">
+
+                        <li>Create a product card dynamically.</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+        </main>
+
+
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+
+            <p class="site-outline-title">Day 10</p>
+
+            <ul class="site-outline-tree">
+
+                <li class="site-outline-item">
+                    <a href="../../index.html">Overview</a>
+                </li>
+
+                <li>
+                    <a href="lesson.html">Lesson</a>
+                </li>
+
+                <li>
+                    <a href="hands-on.html" aria-current="page">Hands-on</a>
+                </li>
+
+                <li>
+                    <a href="homework.html">Homework</a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+    </div>
+
+    <script defer src="../js/hands-on.js"></script>
+
+    <script src="../../shared/js/nav-lock.js"></script>
+
+</body>
+</html>

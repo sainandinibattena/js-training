@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11 - Events & Event Handling</title>
+
+    <link rel="preload" href="../../shared/css/styles.css" as="style">
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+
+    <style>
+
+        .done {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="page-shell">
+
+        <main class="page-main" id="main-content">
+
+            <header class="page-title">
+                <p class="lesson-label">Day 11 - Events & Event Handling</p>
+                <h1>Hands-on</h1>
+            </header>
+
+
+
+            <button id="counter-btn">Click me</button>
+
+            <p>
+                Clicks:
+                <span id="count">0</span>
+            </p>
+
+
+
+            <input
+                id="live-input"
+                placeholder="Type something..."
+            />
+
+            <p id="preview"></p>
+
+
+
+            <form id="reg-form">
+
+                <input
+                    id="name-field"
+                    placeholder="Your name"
+                />
+
+                <button type="submit">
+                    Submit
+                </button>
+
+            </form>
+
+            <p id="welcome"></p>
+
+
+
+            <ul id="todo-list">
+
+                <li>Buy milk</li>
+
+                <li>Walk dog</li>
+
+                <li>Pay bills</li>
+
+            </ul>
+
+
+
+            <details class="exercise">
+
+                <summary>
+                    <span class="lesson-task__tag">Task 1</span>
+                    <span class="lesson-task__title">
+                        Click Counter
+                    </span>
+                </summary>
+
+                <div class="lesson-task__body">
+
+                    <ul class="task-spec">
+
+                        <li>Grab the <code>#counter-btn</code> button and the <code>#count</code> span.</li>
+
+            <li>On every click, increment a counter variable and update the span's <code>textContent</code>.</li>
+
+            <li>Bonus: after 10 clicks, change the button text to <code>"Stop clicking!"</code>.</li>
+                    </ul>
+
+                </div>
+
+            </details>
+
+
+
+            <details class="exercise">
+
+                <summary>
+                    <span class="lesson-task__tag">Task 2</span>
+                    <span class="lesson-task__title">
+                        Live Input Preview
+                    </span>
+                </summary>
+
+                <div class="lesson-task__body">
+
+                    <ul class="task-spec">
+
+                          <li>Grab the <code>#live-input</code> and <code>#preview</code>.</li>
+
+            <li>On every keystroke, copy the current value into the preview using the <code>input</code> event.</li>
+
+            <li>Bonus: if the input is empty, show <code>"Start typing..."</code> in the preview.</li>
+
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+
+
+            <details class="exercise">
+
+                <summary>
+                    <span class="lesson-task__tag">Task 3</span>
+                    <span class="lesson-task__title">
+                        Form preventDefault
+                    </span>
+                </summary>
+
+                <div class="lesson-task__body">
+
+                    <ul class="task-spec">
+
+                         <li>Grab the <code>#reg-form</code> form, <code>#name-field</code> input, and <code>#welcome</code> paragraph.</li>
+
+            <li>On submit, prevent the default page reload.</li>
+
+            <li>Read the input value and set the welcome paragraph to <code>"Welcome, &lt;name&gt;!"</code> using template literals.</li>
+
+            <li>Bonus: if the name field is empty, show <code>"Please enter your name"</code> instead.</li>
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+
+
+            <details class="exercise">
+
+                <summary>
+                    <span class="lesson-task__tag">Bonus</span>
+                    <span class="lesson-task__title">
+                        Event Delegation
+                    </span>
+                </summary>
+
+                <div class="lesson-task__body">
+
+                    <ul class="task-spec">
+
+                         <li>Grab the <code>#todo-list</code> parent.</li>
+
+            <li>Attach ONE click listener that toggles the <code>done</code> class on whichever <code>&lt;li&gt;</code> was clicked.</li>
+
+            <li>Use <code>e.target.tagName === "LI"</code> to filter.</li>
+
+            <li>Bonus: programmatically add a new <code>&lt;li&gt;</code> with <code>createElement</code> and confirm clicking it also toggles correctly.</li>
+
+
+                    </ul>
+
+                </div>
+
+            </details>
+
+        </main>
+
+
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+
+            <p class="site-outline-title">Day 11</p>
+
+            <ul class="site-outline-tree">
+
+                <li class="site-outline-item">
+                    <a href="../../index.html">Overview</a>
+                </li>
+
+                <li>
+                    <a href="lesson.html">Lesson</a>
+                </li>
+
+                <li>
+                    <a href="hands-on.html" aria-current="page">
+                        Hands-on
+                    </a>
+                </li>
+
+                <li>
+                    <a href="homework.html">Homework</a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+    </div>
+
+    <script defer src="../js/hands-on.js"></script>
+
+    <script src="../../shared/js/nav-lock.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 - Functions</title>
+    <link rel="preload" href="../../shared/css/styles.css" as="style">
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="page-main" id="main-content">
+            <header class="page-title">
+                <p class="lesson-label">Day 6 - Functions</p>
+                <h1>Hands-on</h1>
+            </header>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 1</span>
+                    <span class="lesson-task__title"> Rectangle Area</span>
+                </summary>
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Write a function <code>area(length, width)</code> that returns the area of a rectangle.</li>
+                        <li>Call the function three times with different values and log each result.</li>
+                        <li>Bonus: rewrite the same function as an <strong>arrow function</strong> with <strong>implicit return</strong>.</li>
+                    </ul>
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task1Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 2</span>
+                    <span class="lesson-task__title"> Greeting with Default</span>
+                </summary>
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                     <li>Write a function <code>greet(name)</code> that returns <code>"Hello, &lt;name&gt;!"</code>.</li>
+                    <li>Use a <strong>default parameter</strong> so the function uses <code>"Guest"</code> when no name is passed.</li>
+                    <li>Call the function with <code>"Priya"</code>, <code>"Aarav"</code>, and with no argument.</li>
+                    <li>Bonus: try <code>greet(null)</code> and observe whether the default value is used.</li>
+                    </ul>
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task2Output" class="run-output"></pre>
+                </div>
+            </details>
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 3</span>
+                    <span class="lesson-task__title">Temperature Converter</span>
+                </summary>
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Write an arrow function <code>cToF(celsius)</code> that converts Celsius to Fahrenheit.</li>
+                        <li>Use the formula <code>F = C * 9/5 + 32</code> with <strong>implicit return</strong>.</li>
+                        <li>Test the function with <code>0</code>, <code>100</code>, <code>37</code>, and <code>45</code>.</li>
+                                            <p class="output-label">Reference solution output</p>
+                    <pre id="task3Output" class="run-output"></pre>
+                </div>
+            </details>
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Bonus</span>
+                    <span class="lesson-task__title">Pure Vs Impure</span>
+                </summary>
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                       <li>Write a <strong>PURE</strong> function <code>double(n)</code> that returns <code>n * 2</code>.</li>
+                        <li>Write an <strong>IMPURE</strong> function <code>addToTotal(n)</code> that updates an outer variable <code>total</code> and returns the updated value.</li>
+                        <li>Call both functions three times and compare how their outputs behave across multiple calls.</li>
+                        <li>Write a short comment explaining which function is easier to reason about and why.</li>
+                    </ul>
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="bonusOutput" class="run-output"></pre>
+                </div>
+            </details>
+        </main>
+        <aside class="site-outline" aria-label="Curriculum outline">
+            <p class="site-outline-title">Day 6</p>
+            <ul class="site-outline-tree">
+                <li class="site-outline-item"><a href="../../index.html">Overview</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="hands-on.html" aria-current="page">Hands-on</a></li>
+                <li><a href="homework.html">Homework</a></li>
+            </ul>
+        </aside>
+    </div>
+    <script defer src="../js/hands-on.js"></script>
+    <script src="../../shared/js/nav-lock.js"></script>
+</body>
+</html>

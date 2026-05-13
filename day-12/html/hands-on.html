@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>
+        Day 12 - Error Handling & Module Basics
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../../shared/css/styles.css"
+    />
+</head>
+<body>
+
+    <div class="page-shell">
+
+        <main class="page-main" id="main-content">
+
+            <header class="page-title">
+
+                <p class="lesson-label">
+                    Day 12 - Error Handling & Module Basics
+                </p>
+
+                <h1>
+                    Hands-on
+                </h1>
+
+            </header>
+
+
+
+            <details class="exercise">
+
+                <summary>
+
+                    <span class="lesson-task__tag">
+                        Task 1
+                    </span>
+
+                    <span class="lesson-task__title">
+                        Safe JSON Parse
+                    </span>
+
+                </summary>
+
+                <div class="lesson-task__body">
+
+                    <ul class="task-spec">
+
+                        <li>Write a function <code>safeParse(str)</code> using <code>try/catch</code> around <code>JSON.parse(str)</code>.</li>
+                        <li>If parsing succeeds, return the parsed object.</li>
+                        <li>If parsing fails, log <code>"Invalid JSON:"</code> plus the error message and return <code>null</code>.</li>
+                        <li>Test with <code>'{"name":"Priya"}'</code> and <code>'{"name":"Priya"'</code>.</li>
+
+                    </ul>
+                    <p class="output-label">
+    Reference solution output
+</p>
+
+<pre id="task1Output" class="run-output"></pre>
+
+                </div>
+
+            </details>
+
+
+
+            <details class="exercise">
+
+                <summary>
+
+                    <span class="lesson-task__tag">
+                        Task 2
+                    </span>
+
+                    <span class="lesson-task__title">
+                        Throw on Bad Age
+                    </span>
+
+                </summary>
+
+                <div class="lesson-task__body">
+
+                    <ul class="task-spec">
+
+                       <li>Write a function <code>setAge(age)</code>.</li>
+                        <li>Throw an Error with message <code>"Age must be a number"</code> if <code>typeof age !== "number"</code>.</li>
+                        <li>Throw an Error with message <code>"Age must be 0–120"</code> if age is out of range.</li>
+                        <li>Otherwise return age.</li>
+                        <li>Wrap calls in <code>try/catch</code>.</li>
+                        <li>Test: <code>setAge(25)</code>, <code>setAge("twenty")</code>, <code>setAge(200)</code>.</li>
+
+                    </ul>
+                    <p class="output-label">
+    Reference solution output
+</p>
+
+<pre id="task2Output" class="run-output"></pre>
+
+                </div>
+
+            </details>
+
+
+
+            <details class="exercise">
+
+                <summary>
+
+                    <span class="lesson-task__tag">
+                        Task 3
+                    </span>
+
+                    <span class="lesson-task__title">
+                        ValidationError on Email
+                    </span>
+
+                </summary>
+
+                <div class="lesson-task__body">
+
+                    <ul class="task-spec">
+
+                         <li>Define a class <code>ValidationError extends Error</code>.</li>
+                        <li>Set <code>this.name = "ValidationError"</code>.</li>
+                        <li>Write <code>validateEmail(email)</code> that throws a <code>ValidationError</code> if email does not include <code>"@"</code>.</li>
+                        <li>Wrap calls in <code>try/catch</code>.</li>
+                        <li>Inside catch, branch on <code>err instanceof ValidationError</code>.</li>
+                        <li>Test with <code>"priya@example.com"</code> and <code>"priya-no-at"</code>.</li>
+
+                    </ul>
+                    <p class="output-label">
+    Reference solution output
+</p>
+
+<pre id="task3Output" class="run-output"></pre>
+
+                </div>
+
+            </details>
+
+
+
+            <details class="exercise">
+
+                <summary>
+
+                    <span class="lesson-task__tag">
+                        Bonus
+                    </span>
+
+                    <span class="lesson-task__title">
+                        Two File Module Setup
+                    </span>
+
+                </summary>
+
+                <div class="lesson-task__body">
+
+                    <ul class="task-spec">
+
+                         <li>Create <code>mathUtils.js</code> exporting named: <code>PI</code>, <code>add(a, b)</code>, <code>multiply(a, b)</code>.</li>
+                        <li>Export default: <code>formatPrice(n)</code> returning <code>"₹&lt;n&gt;"</code>.</li>
+                        <li>Create <code>app.js</code> importing and using all exports.</li>
+                        <li>Add <code>&lt;script type="module" src="app.js"&gt;&lt;/script&gt;</code> in HTML.</li>
+                    </ul>
+
+                    <p class="output-label">
+    Reference solution output
+</p>
+
+<pre id="bonusOutput" class="run-output"></pre>
+
+                </div>
+
+            </details>
+
+        </main>
+
+
+
+        <aside
+            class="site-outline"
+            aria-label="Curriculum outline"
+        >
+
+            <p class="site-outline-title">
+                Day 12
+            </p>
+
+            <ul class="site-outline-tree">
+
+                <li class="site-outline-item">
+
+                    <a href="../../index.html">
+                        Overview
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="lesson.html">
+                        Lesson
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a
+                        href="hands-on.html"
+                        aria-current="page"
+                    >
+                        Hands-on
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="homework.html">
+                        Homework
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </aside>
+
+    </div>
+
+    <script
+        type="module"
+        src="../js/hands-on.js"
+    ></script>
+
+    <script src="../../shared/js/nav-lock.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7 - Arrays</title>
+    <link rel="preload" href="../../shared/css/styles.css" as="style">
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="page-main" id="main-content">
+            <header class="page-title">
+                <p class="lesson-label">Day 7 - Arrays</p>
+                <h1>Hands-on</h1>
+            </header>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 1</span>
+                    <span class="lesson-task__title"> Cart Manipulation</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Start with: <code>const cart = ["bread", "milk", "eggs"];</code></li>
+                        <li>Use <code>push</code> to add <code>"butter"</code>. Then use <code>unshift</code> to add <code>"rice"</code> at the start. Log the cart.</li>
+                        <li>Use <code>pop</code> to remove the last item. Log what was removed and the new cart.</li>
+                        <li>Use <code>splice(1, 1)</code> to remove one item starting at index 1. Log the result.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task1Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 2</span>
+                    <span class="lesson-task__title"> Filter Passing Scores</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Declare: <code>const scores = [88, 42, 75, 60, 91, 39, 55, 70];</code></li>
+                        <li>Use <code>filter</code> to create a new array of scores that are >= 60 (passing). Log it.</li>
+                        <li>Use <code>find</code> to get the FIRST failing score. Log it.</li>
+                        <li>Use <code>every</code> to check if ALL scores are passing. Log the result.</li>
+                        <li>Bonus: use <code>some</code> to check if ANY score is above 90.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task2Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 3</span>
+                    <span class="lesson-task__title"> Map Prices with GST</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Declare: <code>const prices = [100, 250, 500, 1200, 80];</code></li>
+                        <li>Use <code>map</code> to create a new array with 18% GST added to each price.</li>
+                        <li>Log both the original and new array — the original should be unchanged.</li>
+                        <li>Bonus: round each value to 2 decimal places using <code>.toFixed(2)</code>.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task3Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Bonus</span>
+                    <span class="lesson-task__title"> Reduce to Total</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Declare: <code>const expenses = [250, 800, 120, 50, 1500, 75];</code></li>
+                        <li>Use <code>reduce</code> to calculate the total of all expenses. Log it.</li>
+                        <li>Then use <code>reduce</code> to find the highest single expense. Log it.</li>
+                        <li>Bonus: combine <code>filter</code> + <code>reduce</code> to total only expenses above 100.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task4Output" class="run-output"></pre>
+                </div>
+            </details>
+        </main>
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+            <p class="site-outline-title">Day 7</p>
+
+            <ul class="site-outline-tree">
+                <li class="site-outline-item"><a href="../../index.html">Overview</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="hands-on.html" aria-current="page">Hands-on</a></li>
+                <li><a href="homework.html">Homework</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <script defer src="../js/hands-on.js"></script>
+    <script src="../../shared/js/nav-lock.js"></script>
+</body>
+</html>
