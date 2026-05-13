@@ -1,3 +1,3 @@
 # JavaScript Training
 
- https://sainandinibattena.github.io/js-training/
+https://sainandinibattena.github.io/js-training/index.html
