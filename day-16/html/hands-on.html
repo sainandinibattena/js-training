@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 16 - Prototypes &amp; the Prototype Chain</title>
+    <link rel="preload" href="../../shared/css/styles.css" as="style">
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="page-main" id="main-content">
+            <header class="page-title">
+                <p class="lesson-label">Day 16 - Prototypes &amp; the Prototype Chain</p>
+                <h1>Hands-on</h1>
+            </header>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 1</span>
+                    <span class="lesson-task__title"> Inspect a Prototype</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Create <code>const arr = [1, 2, 3];</code></li>
+                        <li>Use <code>Object.getPrototypeOf(arr)</code> and log it. What is it?</li>
+                        <li>Now log <code>Object.getPrototypeOf(Object.getPrototypeOf(arr))</code>. What is it?</li>
+                        <li>And once more — log the next step. What value ends the chain?</li>
+                        <li>In a comment, draw the chain.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task1Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 2</span>
+                    <span class="lesson-task__title"> Build with Object.create</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Create an object <code>vehicle</code> with method <code>start() { console.log(`${this.name} starting`); }</code></li>
+                        <li>Use <code>Object.create(vehicle)</code> to make <code>car</code> and set <code>car.name = "Tata Nexon"</code>.</li>
+                        <li>Make <code>bike</code> the same way with <code>name = "Royal Enfield"</code>.</li>
+                        <li>Call <code>start()</code> on both.</li>
+                        <li>Use <code>hasOwnProperty</code> and <code>in</code> to confirm <code>name</code> is own and <code>start</code> is inherited.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task2Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 3</span>
+                    <span class="lesson-task__title"> Constructor Function Inheritance</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Build a <code>Person(name)</code> constructor that sets <code>this.name = name</code>.</li>
+                        <li>Add <code>Person.prototype.greet = function () { console.log("Hi, I'm " + this.name); }</code>.</li>
+                        <li>Build a <code>Student(name, school)</code> constructor that calls <code>Person.call(this, name)</code> and sets <code>this.school = school</code>.</li>
+                        <li>Link <code>Student.prototype</code> to inherit from <code>Person.prototype</code> using <code>Object.create</code>.</li>
+                        <li>Add <code>Student.prototype.study = function () { console.log(this.name + " studies at " + this.school); }</code>.</li>
+                        <li>Create a <code>new Student("Riya", "IIT Delhi")</code> and call both <code>greet</code> and <code>study</code>.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task3Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Bonus</span>
+                    <span class="lesson-task__title"> hasOwnProperty vs in</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Create <code>const dog = Object.create({ species: "Canis" }); dog.name = "Bruno";</code></li>
+                        <li>Predict the result of: <code>dog.hasOwnProperty("name")</code>, <code>dog.hasOwnProperty("species")</code>, <code>"name" in dog</code>, <code>"species" in dog</code>, <code>"toString" in dog</code>.</li>
+                        <li>Run all five. Match against your prediction.</li>
+                        <li>In a comment, write the one-line rule for when to use which.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task4Output" class="run-output"></pre>
+                </div>
+            </details>
+        </main>
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+            <p class="site-outline-title">Day 16</p>
+
+            <ul class="site-outline-tree">
+                <li class="site-outline-item"><a href="../../index.html">Overview</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="hands-on.html" aria-current="page">Hands-on</a></li>
+                <li><a href="homework.html">Homework</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <script defer src="../../shared/js/ref-output.js"></script>
+    <script defer src="../js/hands-on.js"></script>
+    <script src="../../shared/js/nav-lock.js"></script>
+</body>
+</html>

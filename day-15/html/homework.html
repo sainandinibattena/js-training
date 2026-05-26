@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15 - The this Keyword</title>
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="page-main" id="main-content">
+            <header class="page-title">
+                <p class="lesson-label">Day 15 - The this Keyword</p>
+            </header>
+
+            <section aria-labelledby="q-hw">
+                <h2 id="q-hw">Practice tasks</h2>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 1</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Build an object <code>user = { name, greet }</code> where <code>greet</code> logs <code>this.name</code>. Now call <code>user.greet()</code>, <code>const fn = user.greet; fn()</code>, and <code>user.greet.call({ name: "X" })</code>. Predict each first, then run.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut1" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 2</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Take any callback bug you've hit before with a class method and fix it three ways (bind, arrow wrapper, class field arrow). Document each.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut2" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 3</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Write <code>function sum(...nums) { return nums.reduce((a, b) =&gt; a + b, 0); }</code>. Use <code>.apply</code> to call it with an array <code>[1, 2, 3, 4, 5]</code>. Why does <code>.apply</code> shine here?</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut3" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 4</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Take an arrow function <code>const f = () =&gt; console.log(this)</code> written at top-level of a module. Try to <code>.bind({ x: 1 })</code> it and call. What does it log? Why?</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut4" class="run-output"></pre>
+                    </div>
+                </details>
+            </section>
+        </main>
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+            <p class="site-outline-title">Day 15</p>
+
+            <ul class="site-outline-tree">
+                <li class="site-outline-item"><a href="../../index.html">Overview</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="hands-on.html">Hands-on</a></li>
+                <li><a href="homework.html" aria-current="page">Homework</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <script defer src="../../shared/js/ref-output.js"></script>
+    <script defer src="../js/homework.js"></script>
+    <script src="../../shared/js/nav-lock.js"></script>
+</body>
+</html>

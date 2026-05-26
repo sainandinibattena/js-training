@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13 - Execution Context &amp; Hoisting</title>
+    <link rel="preload" href="../../shared/css/styles.css" as="style">
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="page-main" id="main-content">
+            <header class="page-title">
+                <p class="lesson-label">Day 13 - Execution Context &amp; Hoisting</p>
+                <h1>Hands-on</h1>
+            </header>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 1</span>
+                    <span class="lesson-task__title"> Predict the var hoist</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Type this exact snippet in a fresh JS file: <code>console.log(name); var name = "Priya"; console.log(name);</code></li>
+                        <li>BEFORE running it, predict what each <code>console.log</code> will print.</li>
+                        <li>Now run it. Match your prediction against actual output.</li>
+                        <li>Add a comment explaining why the FIRST log is <code>undefined</code> and not a <code>ReferenceError</code>.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task1Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 2</span>
+                    <span class="lesson-task__title"> Trigger the TDZ</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Type this snippet in a fresh JS file: <code>console.log(city); let city = "Jaipur";</code></li>
+                        <li>Predict what happens. Then run it.</li>
+                        <li>Note the EXACT error name and message.</li>
+                        <li>Move the <code>let city = "Jaipur"</code> line ABOVE the <code>console.log</code>. Verify the file now runs.</li>
+                        <li>In a comment, write what TDZ stands for.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task2Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 3</span>
+                    <span class="lesson-task__title"> Function declaration vs expression</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Create a JS file. Add these four lines IN THIS ORDER: <code>sayHi();</code> then <code>greet();</code> then <code>function sayHi() { console.log("Hi"); }</code> then <code>var greet = function () { console.log("Hello"); };</code></li>
+                        <li>Predict which call works and which throws.</li>
+                        <li>Run the file. Note the exact error type for the failing call.</li>
+                        <li>In a comment, explain the difference between function declarations and function expressions in terms of hoisting.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task3Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Bonus</span>
+                    <span class="lesson-task__title"> Trace the Call Stack</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Define three functions in a JS file: <code>multiply(a, b)</code> returns <code>a * b</code>. <code>square(n)</code> returns <code>multiply(n, n)</code>. <code>printSquare(n)</code> does <code>console.log(square(n))</code>.</li>
+                        <li>Call <code>printSquare(5)</code>.</li>
+                        <li>In a comment, draw the call stack at the EXACT moment <code>multiply(5, 5)</code> is at the top — show all four frames stacked.</li>
+                        <li>Predict the final console output.</li>
+                        <li>Add <code>console.trace()</code> inside <code>multiply</code> and run again. Compare DevTools' stack trace with your hand-drawn stack.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task4Output" class="run-output"></pre>
+                </div>
+            </details>
+        </main>
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+            <p class="site-outline-title">Day 13</p>
+
+            <ul class="site-outline-tree">
+                <li class="site-outline-item"><a href="../../index.html">Overview</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="hands-on.html" aria-current="page">Hands-on</a></li>
+                <li><a href="homework.html">Homework</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <script defer src="../js/hands-on.js"></script>
+    <script src="../../shared/js/nav-lock.js"></script>
+</body>
+</html>

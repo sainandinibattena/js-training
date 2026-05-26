@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 21 - Advanced Array &amp; Object Patterns</title>
+    <link rel="preload" href="../../shared/css/styles.css" as="style">
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="page-main" id="main-content">
+            <header class="page-title">
+                <p class="lesson-label">Day 21 - Advanced Array &amp; Object Patterns</p>
+                <h1>Hands-on</h1>
+            </header>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 1</span>
+                    <span class="lesson-task__title"> Prove Shallow Clone Bug</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li><code>const orig = { name: "Priya", addr: { city: "Jaipur" } }</code></li>
+                        <li>Shallow copy with spread; mutate <code>copy.addr.city</code>. Log <code>orig.addr.city</code>.</li>
+                        <li>Repeat with <code>structuredClone(orig)</code> — confirm <code>orig</code> is untouched.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task1Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 2</span>
+                    <span class="lesson-task__title"> Immutable Nested Update</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>State: <code>{ user: { name: "Priya", prefs: { theme: "light", lang: "en" } } }</code></li>
+                        <li>Produce NEW state with <code>prefs.theme</code> = <code>"dark"</code> using spread only.</li>
+                        <li>Verify <code>state.user.prefs.theme</code> is still <code>"light"</code>.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task2Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 3</span>
+                    <span class="lesson-task__title"> Update One Item in an Array</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li><code>toggleDone(tasks, id)</code> returns a NEW array with matching <code>done</code> flipped.</li>
+                        <li>Call twice on the same <code>tasks</code>. Originals must not mutate.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task3Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Bonus</span>
+                    <span class="lesson-task__title"> Safe Deep Read</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Read <code>data.user.profile.city</code> with fallback <code>"Unknown"</code>.</li>
+                        <li>Read <code>data.user.profile.bio?.length ?? 0</code>.</li>
+                        <li>Try with <code>data = {}</code> — no crash, fallbacks only.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task4Output" class="run-output"></pre>
+                </div>
+            </details>
+        </main>
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+            <p class="site-outline-title">Day 21</p>
+
+            <ul class="site-outline-tree">
+                <li class="site-outline-item"><a href="../../index.html">Overview</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="hands-on.html" aria-current="page">Hands-on</a></li>
+                <li><a href="homework.html">Homework</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <script defer src="../../shared/js/ref-output.js"></script>
+    <script defer src="../js/hands-on.js"></script>
+    <script src="../../shared/js/nav-lock.js"></script>
+</body>
+</html>

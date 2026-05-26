@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13 - Execution Context &amp; Hoisting</title>
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="page-main" id="main-content">
+            <header class="page-title">
+                <p class="lesson-label">Day 13 - Execution Context &amp; Hoisting</p>
+            </header>
+
+            <section aria-labelledby="q-hw">
+                <h2 id="q-hw">Practice tasks</h2>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 1</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Predict the output of <code>console.log(typeof age); var age = 25;</code> BEFORE running it. Run it. Compare. (Hint: <code>typeof</code> on an undefined variable is unusual.)</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut1" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 2</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Take a <code>let</code> declaration, try to access it on the line above its declaration, and screenshot the exact error message your console gives.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut2" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 3</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Write three versions of the same simple function — once as a <code>function declaration</code>, once as a <code>var</code> expression, once as a <code>const</code> arrow. Try calling each one BEFORE its line. Document which one works, which throws TypeError, which throws ReferenceError, and why.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut3" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 4</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Open any small JS file you've written before. Add <code>console.trace()</code> to one of its functions. Run it. Read the stack trace and identify each EC.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut4" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 5</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Read: <a href="https://javascript.info/var" target="_blank" rel="noopener noreferrer">javascript.info/var</a> and <a href="https://javascript.info/closure" target="_blank" rel="noopener noreferrer">javascript.info/closure</a> (the first half — Lexical Environment).</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut5" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 6 (Bonus)</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Watch Akshay Saini's "Namaste JS" Episode 2 — Hoisting in JavaScript. ~12 minutes. Excellent visual reinforcement of today.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut6" class="run-output"></pre>
+                    </div>
+                </details>
+            </section>
+        </main>
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+            <p class="site-outline-title">Day 13</p>
+
+            <ul class="site-outline-tree">
+                <li class="site-outline-item"><a href="../../index.html">Overview</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="hands-on.html">Hands-on</a></li>
+                <li><a href="homework.html" aria-current="page">Homework</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <script defer src="../js/homework.js"></script>
+    <script src="../../shared/js/nav-lock.js"></script>
+</body>
+</html>

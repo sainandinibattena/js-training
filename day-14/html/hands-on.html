@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14 - Scope &amp; Closures</title>
+    <link rel="preload" href="../../shared/css/styles.css" as="style">
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="page-main" id="main-content">
+            <header class="page-title">
+                <p class="lesson-label">Day 14 - Scope &amp; Closures</p>
+                <h1>Hands-on</h1>
+            </header>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 1</span>
+                    <span class="lesson-task__title"> Build a Counter</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Write a function <code>makeCounter()</code> that returns a function.</li>
+                        <li>The returned function, each time it is called, returns the next integer starting from 1.</li>
+                        <li>Create TWO independent counters with <code>makeCounter()</code> and verify they don't interfere.</li>
+                        <li>In a comment, explain WHERE the count variable lives between calls.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task1Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 2</span>
+                    <span class="lesson-task__title"> Fix the var-in-Loop Bug</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Type this snippet exactly: <code>for (var i = 1; i &lt;= 3; i++) { setTimeout(() =&gt; console.log(i), 100); }</code></li>
+                        <li>Predict the output. Run it. Note the actual output.</li>
+                        <li>Fix it by changing ONE keyword. Run again, verify it logs 1, 2, 3.</li>
+                        <li>In a comment, explain why <code>var</code> produced the surprising output and <code>let</code> fixes it.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task2Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 3</span>
+                    <span class="lesson-task__title"> Private Bank Balance</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Write a function <code>createAccount(initial)</code> that returns an object with three methods: <code>deposit(amount)</code>, <code>withdraw(amount)</code>, <code>getBalance()</code>.</li>
+                        <li><code>balance</code> must be PRIVATE — not accessible as <code>account.balance</code>.</li>
+                        <li>Test with: open an account with 1000, deposit 500, withdraw 200, log the balance.</li>
+                        <li>Verify <code>account.balance</code> is <code>undefined</code>.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task3Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Bonus</span>
+                    <span class="lesson-task__title"> Build a Memoizer</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Write a function <code>memoize(fn)</code> that returns a new function caching results of <code>fn</code> by argument value.</li>
+                        <li>Use it to wrap an <code>expensiveSquare(n)</code> that logs <code>"computing..."</code> and returns <code>n * n</code>.</li>
+                        <li>Call the memoized version with <code>5</code> twice, then <code>10</code> once, then <code>5</code> again. Note when the log fires.</li>
+                        <li>In a comment, explain where the cache lives.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task4Output" class="run-output"></pre>
+                </div>
+            </details>
+        </main>
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+            <p class="site-outline-title">Day 14</p>
+
+            <ul class="site-outline-tree">
+                <li class="site-outline-item"><a href="../../index.html">Overview</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="hands-on.html" aria-current="page">Hands-on</a></li>
+                <li><a href="homework.html">Homework</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <script defer src="../../shared/js/ref-output.js"></script>
+    <script defer src="../js/hands-on.js"></script>
+    <script src="../../shared/js/nav-lock.js"></script>
+</body>
+</html>

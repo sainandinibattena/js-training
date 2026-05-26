@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 17 - Classes &amp; OOP</title>
+    <link rel="preload" href="../../shared/css/styles.css" as="style">
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="page-main" id="main-content">
+            <header class="page-title">
+                <p class="lesson-label">Day 17 - Classes &amp; OOP</p>
+                <h1>Hands-on</h1>
+            </header>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 1</span>
+                    <span class="lesson-task__title"> Basic Class with Getter</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Build a <code>Rectangle</code> class with <code>width</code>, <code>height</code> instance properties.</li>
+                        <li>Add a <code>get area()</code> getter that returns <code>width * height</code>.</li>
+                        <li>Add a method <code>scale(factor)</code> that multiplies both dimensions in place.</li>
+                        <li>Create a <code>2 × 3</code> rectangle, log the area, scale by <code>2</code>, log the area again.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task1Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 2</span>
+                    <span class="lesson-task__title"> Inheritance with super</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Build an <code>Employee(name, salary)</code> class with a <code>describe()</code> method that logs <code>${name} earns ₹${salary}/month</code>.</li>
+                        <li>Build a <code>Manager(name, salary, team)</code> class that extends Employee.</li>
+                        <li>Override <code>describe()</code> to first call <code>super.describe()</code> then log <code>Leads team of ${team.length}</code>.</li>
+                        <li>Test with a Manager named "Riya", salary 80000, team <code>["Priya", "Aarav", "Anaya"]</code>.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task2Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 3</span>
+                    <span class="lesson-task__title"> Private Field with #</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Build a <code>Counter</code> class with a <code>#count</code> private field starting at 0.</li>
+                        <li>Add <code>inc()</code>, <code>dec()</code>, and a <code>get value()</code> getter.</li>
+                        <li>Throw an <code>Error</code> if <code>dec()</code> would make the count negative.</li>
+                        <li>Create a counter, call <code>inc</code> three times, <code>dec</code> once, log the value, then try to <code>dec</code> four more times in a try/catch.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task3Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Bonus</span>
+                    <span class="lesson-task__title"> Custom Error Class</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Build a <code>ValidationError</code> class that extends <code>Error</code>. Constructor takes <code>field</code> and <code>message</code>.</li>
+                        <li>Set <code>this.name = "ValidationError"</code> and <code>this.field = field</code> inside the constructor.</li>
+                        <li>Write a <code>validateUser({ name, age })</code> function that throws a <code>ValidationError("name", ...)</code> if name is missing and <code>ValidationError("age", ...)</code> if age &lt; 0.</li>
+                        <li>Call it twice in try/catch — once with bad name, once with bad age. Log <code>e.field</code> and <code>e.message</code>.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task4Output" class="run-output"></pre>
+                </div>
+            </details>
+        </main>
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+            <p class="site-outline-title">Day 17</p>
+
+            <ul class="site-outline-tree">
+                <li class="site-outline-item"><a href="../../index.html">Overview</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="hands-on.html" aria-current="page">Hands-on</a></li>
+                <li><a href="homework.html">Homework</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <script defer src="../../shared/js/ref-output.js"></script>
+    <script defer src="../js/hands-on.js"></script>
+    <script src="../../shared/js/nav-lock.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14 - Scope &amp; Closures</title>
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="page-main" id="main-content">
+            <header class="page-title">
+                <p class="lesson-label">Day 14 - Scope &amp; Closures</p>
+            </header>
+
+            <section aria-labelledby="q-hw">
+                <h2 id="q-hw">Practice tasks</h2>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 1</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Write <code>multiplier(factor)</code> that returns a function multiplying its argument by <code>factor</code>. Create <code>double = multiplier(2)</code> and <code>triple = multiplier(3)</code>. Verify both work independently.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut1" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 2</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Re-do the var-in-loop bug with a <code>for...of</code> over <code>[10, 20, 30]</code> and <code>setTimeout</code>. Use <code>let</code>. Predict, then verify.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut2" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 3</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Take the bank-account closure and add a <code>transactionCount</code> private variable that increments on every deposit/withdraw. Add a <code>getTransactionCount()</code> method.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut3" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 4</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Write <code>once(fn)</code> — a closure that takes a function and returns a wrapped version that only runs the FIRST time it's called. Subsequent calls return the cached first result.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut4" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 5</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Read: <a href="https://javascript.info/closure" target="_blank" rel="noopener noreferrer">javascript.info/closure</a> (full chapter) and <a href="https://javascript.info/var" target="_blank" rel="noopener noreferrer">javascript.info/var</a> if you skipped it yesterday.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut5" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 6 (Bonus)</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Watch Akshay Saini's "Namaste JS" Episode 10 — Closures. ~15 minutes.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut6" class="run-output"></pre>
+                    </div>
+                </details>
+            </section>
+        </main>
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+            <p class="site-outline-title">Day 14</p>
+
+            <ul class="site-outline-tree">
+                <li class="site-outline-item"><a href="../../index.html">Overview</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="hands-on.html">Hands-on</a></li>
+                <li><a href="homework.html" aria-current="page">Homework</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <script defer src="../../shared/js/ref-output.js"></script>
+    <script defer src="../js/homework.js"></script>
+    <script src="../../shared/js/nav-lock.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+﻿{
+    "liveServer.settings.root": "/",
+    "liveServer.settings.file": "index.html",
+    "liveServer.settings.ignoreFiles": [
+        ".vscode/**",
+        "**/*.scss",
+        "**/*.sass",
+        "**/*.ts"
+    ]
+}

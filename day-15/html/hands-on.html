@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15 - The this Keyword</title>
+    <link rel="preload" href="../../shared/css/styles.css" as="style">
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="page-main" id="main-content">
+            <header class="page-title">
+                <p class="lesson-label">Day 15 - The this Keyword</p>
+                <h1>Hands-on</h1>
+            </header>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 1</span>
+                    <span class="lesson-task__title"> Predict the this</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Type the following snippet exactly: a <code>user</code> object with <code>name: "Priya"</code> and a method <code>greet() { console.log(this.name); }</code>. Then call <code>user.greet()</code>. Then assign <code>const g = user.greet</code> and call <code>g()</code>.</li>
+                        <li>Predict the output of each call BEFORE running.</li>
+                        <li>Run. Note actual output.</li>
+                        <li>In a comment, explain why the second call lost the <code>this</code>.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task1Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 2</span>
+                    <span class="lesson-task__title"> Fix it Three Ways</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Take this code: <code>class Timer { constructor() { this.sec = 0; } tick() { this.sec++; console.log(this.sec); } }</code></li>
+                        <li>Create <code>const t = new Timer();</code> then <code>setInterval(t.tick, 1000);</code></li>
+                        <li>Run it — observe the TypeError.</li>
+                        <li>Now fix it THREE different ways: (1) using <code>.bind</code>, (2) using an arrow wrapper, (3) using a class field arrow.</li>
+                        <li>Verify all three log 1, 2, 3, ...</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task2Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 3</span>
+                    <span class="lesson-task__title"> call / apply / bind</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Define <code>function describe(role, city) { console.log(`${this.name} is a ${role} from ${city}`); }</code></li>
+                        <li>Create <code>const u = { name: "Aarav" }</code></li>
+                        <li>Call <code>describe</code> with <code>u</code> as <code>this</code> using <code>.call</code>, then <code>.apply</code>, then create a bound version with <code>.bind</code> (pre-fill role to "developer") and call it.</li>
+                        <li>In a comment, write the one-line difference between the three.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task3Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Bonus</span>
+                    <span class="lesson-task__title"> Arrow vs Regular Method</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Build an object <code>team</code> with <code>members: ["Priya", "Aarav", "Riya"]</code> and TWO methods.</li>
+                        <li>Method A — <code>printRegular()</code> uses <code>forEach(function(m) { console.log(this.members.length, m); })</code>.</li>
+                        <li>Method B — <code>printArrow()</code> uses <code>forEach((m) =&gt; { console.log(this.members.length, m); })</code>.</li>
+                        <li>Call both. Note which one breaks and why.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task4Output" class="run-output"></pre>
+                </div>
+            </details>
+        </main>
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+            <p class="site-outline-title">Day 15</p>
+
+            <ul class="site-outline-tree">
+                <li class="site-outline-item"><a href="../../index.html">Overview</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="hands-on.html" aria-current="page">Hands-on</a></li>
+                <li><a href="homework.html">Homework</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <script defer src="../../shared/js/ref-output.js"></script>
+    <script defer src="../js/hands-on.js"></script>
+    <script src="../../shared/js/nav-lock.js"></script>
+</body>
+</html>

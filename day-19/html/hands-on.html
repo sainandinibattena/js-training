@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 19 - Async / Await</title>
+    <link rel="preload" href="../../shared/css/styles.css" as="style">
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="page-main" id="main-content">
+            <header class="page-title">
+                <p class="lesson-label">Day 19 - Async / Await</p>
+                <h1>Hands-on</h1>
+            </header>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 1</span>
+                    <span class="lesson-task__title"> Convert .then to async/await</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Take this chain: <code>fetchUser(7).then(u =&gt; fetchOrders(u.id)).then(orders =&gt; console.log(orders.length)).catch(e =&gt; console.error(e))</code>.</li>
+                        <li>Mock <code>fetchUser</code> and <code>fetchOrders</code> with <code>setTimeout</code> that resolve in 300ms.</li>
+                        <li>Rewrite as a single <code>async function showOrders(id)</code> using <code>await</code> and <code>try/catch</code>.</li>
+                        <li>Call it with <code>showOrders(7)</code>.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task1Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 2</span>
+                    <span class="lesson-task__title"> Sequential vs Parallel Timing</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Take a <code>fetchPrice(id)</code> that takes 500ms to resolve to <code>{ id, price: 100 }</code>.</li>
+                        <li>Write <code>slow()</code> with separate <code>await</code>s. Time it.</li>
+                        <li>Write <code>fast()</code> with <code>Promise.all</code>. Time it.</li>
+                        <li>Confirm <code>slow ≈ 1500ms</code> and <code>fast ≈ 500ms</code>.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task2Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Task 3</span>
+                    <span class="lesson-task__title"> Fix the forEach Trap</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Use <code>const ids = [1, 2, 3]</code> and <code>fetchPrice(id)</code> (500ms each).</li>
+                        <li>Try <code>ids.forEach(async (id) =&gt; ...)</code> — note the function returns before any price logs.</li>
+                        <li>Fix with (1) <code>for...of</code>, (2) <code>Promise.all + map</code>.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task3Output" class="run-output"></pre>
+                </div>
+            </details>
+
+            <details class="exercise">
+                <summary>
+                    <span class="lesson-task__tag">Bonus</span>
+                    <span class="lesson-task__title"> Retry with async/await</span>
+                </summary>
+
+                <div class="lesson-task__body">
+                    <ul class="task-spec">
+                        <li>Write <code>retry(fn, attempts)</code> that calls async <code>fn()</code> and retries up to <code>attempts</code> times if it rejects.</li>
+                        <li>After all attempts fail, throw the last error.</li>
+                        <li>Test with a <code>flaky()</code> function that randomly resolves/rejects.</li>
+                    </ul>
+
+                    <p class="output-label">Reference solution output</p>
+                    <pre id="task4Output" class="run-output"></pre>
+                </div>
+            </details>
+        </main>
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+            <p class="site-outline-title">Day 19</p>
+
+            <ul class="site-outline-tree">
+                <li class="site-outline-item"><a href="../../index.html">Overview</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="hands-on.html" aria-current="page">Hands-on</a></li>
+                <li><a href="homework.html">Homework</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <script defer src="../../shared/js/ref-output.js"></script>
+    <script defer src="../js/hands-on.js"></script>
+    <script src="../../shared/js/nav-lock.js"></script>
+</body>
+</html>
