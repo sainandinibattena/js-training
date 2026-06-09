@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 23 - Iterators &amp; Generators</title>
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="page-main" id="main-content">
+            <header class="page-title">
+                <p class="lesson-label">Day 23 - Iterators &amp; Generators</p>
+            </header>
+
+            <section aria-labelledby="q-hw">
+                <h2 id="q-hw">Practice tasks</h2>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 1</span>
+                        <span class="lesson-task__title"> <code>chunked(arr, size)</code></span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Write a generator <code>chunked(arr, size)</code> that yields successive chunks of <code>arr</code> of length <code>size</code>.</li>
+                            <li>E.g. <code>[...chunked([1, 2, 3, 4, 5], 2)]</code> → <code>[[1, 2], [3, 4], [5]]</code>.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut1" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 2</span>
+                        <span class="lesson-task__title"> Primes + <code>take</code></span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Build an infinite generator of primes.</li>
+                            <li>Use it with <code>take(primes(), 10)</code> to get the first 10.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut2" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 3</span>
+                        <span class="lesson-task__title"> <code>zip(a, b)</code></span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Write <code>zip(a, b)</code> — a generator that yields pairs from two iterables, stopping when either ends.</li>
+                            <li>Test with arrays of different lengths.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut3" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 4</span>
+                        <span class="lesson-task__title"> Fibonacci with generator + <code>take</code></span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Re-do the Fibonacci sequence using a generator and <code>take</code> (first N values).</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut4" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Bonus</span>
+                        <span class="lesson-task__title"> Async generator + <code>for await...of</code></span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Build a small async generator that yields once per second for 5 seconds (reference demo uses a short delay so the page stays responsive).</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut5" class="run-output"></pre>
+                    </div>
+                </details>
+            </section>
+        </main>
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+            <p class="site-outline-title">Day 23</p>
+
+            <ul class="site-outline-tree">
+                <li class="site-outline-item"><a href="../../index.html">Overview</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="hands-on.html">Hands-on</a></li>
+                <li><a href="homework.html" aria-current="page">Homework</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <script defer src="../../shared/js/ref-output.js"></script>
+    <script defer src="../js/homework.js"></script>
+    <script src="../../shared/js/nav-lock.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 25 - Functional Programming</title>
+    <link rel="preload" href="../../shared/css/styles.css" as="style">
+    <link rel="stylesheet" href="../../shared/css/styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <main class="page-main" id="main-content">
+            <header class="page-title">
+                <p class="lesson-label">Day 25 - Functional Programming</p>
+            </header>
+
+            <section aria-labelledby="q-hw">
+                <h2 id="q-hw">Practice tasks</h2>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 1</span>
+                        <span class="lesson-task__title"> <code>compose</code> vs <code>pipe</code> ordering</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Implement <code>compose</code> from scratch (right-to-left). Use <code>addOne</code>, <code>square</code>, <code>negate</code> as in hands-on; confirm output ordering vs <code>pipe</code>.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut1" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 2</span>
+                        <span class="lesson-task__title"> Mutate vs pure array update</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Refactor a function that mutates an array into a pure version that returns a new array; show before/after on the original array.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut2" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 3</span>
+                        <span class="lesson-task__title"> Generic <code>curry(fn)</code></span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Implement <code>curry(fn)</code> for a fixed-arity function. Test with <code>curry(add)(1)(2)(3)</code> where <code>add(a, b, c)</code> sums three numbers.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut3" class="run-output"></pre>
+                    </div>
+                </details>
+
+                <details class="exercise">
+                    <summary>
+                        <span class="lesson-task__tag">Practice task 4</span>
+                        <span class="lesson-task__title"> Average line total (pre-GST)</span>
+                    </summary>
+
+                    <div class="lesson-task__body">
+                        <ul class="task-spec">
+                            <li>Use the Topic 7 order data: pipeline that returns the <strong>average</strong> line value (<code>price × quantity</code>) — <strong>excluding GST</strong>. Use small pure functions.</li>
+                        </ul>
+
+                        <p class="output-label">Reference solution output</p>
+                        <pre id="homeworkOut4" class="run-output"></pre>
+                    </div>
+                </details>
+            </section>
+        </main>
+
+        <aside class="site-outline" aria-label="Curriculum outline">
+            <p class="site-outline-title">Day 25</p>
+
+            <ul class="site-outline-tree">
+                <li class="site-outline-item"><a href="../../index.html">Overview</a></li>
+                <li><a href="lesson.html">Lesson</a></li>
+                <li><a href="hands-on.html">Hands-on</a></li>
+                <li><a href="homework.html" aria-current="page">Homework</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <script defer src="../../shared/js/ref-output.js"></script>
+    <script defer src="../js/homework.js"></script>
+    <script src="../../shared/js/nav-lock.js"></script>
+</body>
+</html>
